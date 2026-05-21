@@ -99,10 +99,8 @@ for (const [slug, title] of MODULE_ORDER) {
   lines.push(`Progress: **${ms.done}/${ms.total} (${ms.pct}%)**  \`${bar(ms.pct)}\``);
   lines.push('');
 
-  // Sections sorted by section title
-  const sectionList = [...sections.entries()].sort((a, b) =>
-    (a[0] || '').localeCompare(b[0] || '')
-  );
+  // Sections in TOC order (insertion order from _init-progress.js depth-first walk)
+  const sectionList = [...sections.entries()];
 
   lines.push('| Section | Done | In-progress | Todo | Skip | Total | % |');
   lines.push('|---|---:|---:|---:|---:|---:|---:|');

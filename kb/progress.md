@@ -4,10 +4,10 @@ _Generated from `progress.json` (648 unique topics). Re-run `node _build-progres
 
 ## Overall
 
-**1 done · 0 in-progress · 643 todo · 4 skip · 0%**
+**75 done · 0 in-progress · 562 todo · 11 skip · 12%**
 
 ```
-░░░░░░░░░░░░░░░░░░░░  0%
+▓▓░░░░░░░░░░░░░░░░░░  12%
 ```
 
 ## Modules
@@ -15,18 +15,18 @@ _Generated from `progress.json` (648 unique topics). Re-run `node _build-progres
 | Module | Done | In-progress | Todo | Skip | Total | % | Progress |
 |---|---:|---:|---:|---:|---:|---:|---|
 | [Welcome / What's New](#module-welcome) | 1 | 0 | 0 | 4 | 1 | 100% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓` |
-| [Getting Started with Aspen Unified](#module-getting-started) | 0 | 0 | 14 | 0 | 14 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
+| [Getting Started with Aspen Unified](#module-getting-started) | 8 | 0 | 1 | 5 | 9 | 89% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░` |
 | [Aspen Unified PIMS / Multi-Site PIMS](#module-pims) | 0 | 0 | 291 | 0 | 291 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
 | [Aspen Unified Scheduling](#module-scheduling) | 0 | 0 | 88 | 0 | 88 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
 | [Aspen Unified GDOT Builder](#module-gdot) | 0 | 0 | 63 | 0 | 63 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
-| [Aspen Unified Reconciliation and Accounting](#module-aura) | 0 | 0 | 59 | 0 | 59 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
+| [Aspen Unified Reconciliation and Accounting](#module-aura) | 58 | 0 | 0 | 1 | 58 | 100% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓` |
 | [Aspen Unified Movements](#module-aum) | 0 | 0 | 41 | 0 | 41 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
 | [AspenTech Strategic Planning for Sustainability Pathways](#module-sps) | 0 | 0 | 28 | 0 | 28 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
 | [Distillation Mode Manager](#module-distillation-mode-manager) | 0 | 0 | 13 | 0 | 13 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
 | [Assay Manager System](#module-assay-manager) | 0 | 0 | 11 | 0 | 11 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
-| [Aspen Unified Catalogs](#module-catalogs) | 0 | 0 | 7 | 0 | 7 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
+| [Aspen Unified Catalogs](#module-catalogs) | 6 | 0 | 0 | 1 | 6 | 100% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓` |
 | [Model Management / Common Functions](#module-model-management) | 0 | 0 | 26 | 0 | 26 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
-| [Common Equations / Glossary](#module-reference) | 0 | 0 | 2 | 0 | 2 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
+| [Common Equations / Glossary](#module-reference) | 2 | 0 | 0 | 0 | 2 | 100% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓` |
 
 ## Module: welcome
 
@@ -46,17 +46,17 @@ Progress: **1/1 (100%)**  `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓�
 
 **Getting Started with Aspen Unified**
 
-Progress: **0/14 (0%)**  `░░░░░░░░░░░░░░░░░░░░`
+Progress: **8/9 (89%)**  `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░`
 
 | Section | Done | In-progress | Todo | Skip | Total | % |
 |---|---:|---:|---:|---:|---:|---:|
-| Archiving and Unarchiving Model Branches | 0 | 0 | 1 | 0 | 1 | 0% |
-| Aspen Unified Global Settings | 0 | 0 | 2 | 0 | 2 | 0% |
-| Creating New Models | 0 | 0 | 7 | 0 | 7 | 0% |
-| Getting Started | 0 | 0 | 1 | 0 | 1 | 0% |
-| Getting Started with Aspen Unified | 0 | 0 | 1 | 0 | 1 | 0% |
-| Home Page | 0 | 0 | 1 | 0 | 1 | 0% |
-| Roles and Security Options | 0 | 0 | 1 | 0 | 1 | 0% |
+| Archiving and Unarchiving Model Branches | 1 | 0 | 0 | 0 | 1 | 100% |
+| Aspen Unified Global Settings | 1 | 0 | 1 | 0 | 2 | 50% |
+| Creating New Models | 3 | 0 | 0 | 4 | 3 | 100% |
+| Getting Started | 1 | 0 | 0 | 0 | 1 | 100% |
+| Getting Started with Aspen Unified | 0 | 0 | 0 | 1 | 0 | 0% |
+| Home Page | 1 | 0 | 0 | 0 | 1 | 100% |
+| Roles and Security Options | 1 | 0 | 0 | 0 | 1 | 100% |
 
 ## Module: pims
 
@@ -117,23 +117,23 @@ Progress: **0/63 (0%)**  `░░░░░░░░░░░░░░░░░░
 
 **Aspen Unified Reconciliation and Accounting**
 
-Progress: **0/59 (0%)**  `░░░░░░░░░░░░░░░░░░░░`
+Progress: **58/58 (100%)**  `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓`
 
 | Section | Done | In-progress | Todo | Skip | Total | % |
 |---|---:|---:|---:|---:|---:|---:|
-| Cases and Analysis | 0 | 0 | 7 | 0 | 7 | 0% |
-| Data Hub | 0 | 0 | 2 | 0 | 2 | 0% |
-| Flowsheet | 0 | 0 | 10 | 0 | 10 | 0% |
-| Migrating an AORA Model to AURA | 0 | 0 | 1 | 0 | 1 | 0% |
-| Model Data | 0 | 0 | 14 | 0 | 14 | 0% |
-| Model Settings | 0 | 0 | 3 | 0 | 3 | 0% |
-| New Reconciliation Accounting Model Dialog Box | 0 | 0 | 1 | 0 | 1 | 0% |
-| Overview | 0 | 0 | 1 | 0 | 1 | 0% |
-| Reports | 0 | 0 | 13 | 0 | 13 | 0% |
-| Sankey | 0 | 0 | 2 | 0 | 2 | 0% |
-| Using Aspen Unified Reconciliation and Accounting | 0 | 0 | 1 | 0 | 1 | 0% |
-| What is AURA? | 0 | 0 | 1 | 0 | 1 | 0% |
-| Work Area | 0 | 0 | 3 | 0 | 3 | 0% |
+| Cases and Analysis | 7 | 0 | 0 | 0 | 7 | 100% |
+| Data Hub | 2 | 0 | 0 | 0 | 2 | 100% |
+| Flowsheet | 10 | 0 | 0 | 0 | 10 | 100% |
+| Migrating an AORA Model to AURA | 1 | 0 | 0 | 0 | 1 | 100% |
+| Model Data | 14 | 0 | 0 | 0 | 14 | 100% |
+| Model Settings | 3 | 0 | 0 | 0 | 3 | 100% |
+| New Reconciliation Accounting Model Dialog Box | 1 | 0 | 0 | 0 | 1 | 100% |
+| Overview | 1 | 0 | 0 | 0 | 1 | 100% |
+| Reports | 13 | 0 | 0 | 0 | 13 | 100% |
+| Sankey | 2 | 0 | 0 | 0 | 2 | 100% |
+| Using Aspen Unified Reconciliation and Accounting | 0 | 0 | 0 | 1 | 0 | 0% |
+| What is AURA? | 1 | 0 | 0 | 0 | 1 | 100% |
+| Work Area | 3 | 0 | 0 | 0 | 3 | 100% |
 
 ## Module: aum
 
@@ -211,14 +211,14 @@ Progress: **0/11 (0%)**  `░░░░░░░░░░░░░░░░░░
 
 **Aspen Unified Catalogs**
 
-Progress: **0/7 (0%)**  `░░░░░░░░░░░░░░░░░░░░`
+Progress: **6/6 (100%)**  `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓`
 
 | Section | Done | In-progress | Todo | Skip | Total | % |
 |---|---:|---:|---:|---:|---:|---:|
-| Aspen Unified Site Catalog | 0 | 0 | 1 | 0 | 1 | 0% |
-| Catalog Home | 0 | 0 | 1 | 0 | 1 | 0% |
-| Pricing Catalogs | 0 | 0 | 4 | 0 | 4 | 0% |
-| Using Aspen Unified Catalogs | 0 | 0 | 1 | 0 | 1 | 0% |
+| Aspen Unified Site Catalog | 1 | 0 | 0 | 0 | 1 | 100% |
+| Catalog Home | 1 | 0 | 0 | 0 | 1 | 100% |
+| Pricing Catalogs | 4 | 0 | 0 | 0 | 4 | 100% |
+| Using Aspen Unified Catalogs | 0 | 0 | 0 | 1 | 0 | 0% |
 
 ## Module: model-management
 
@@ -247,9 +247,9 @@ Progress: **0/26 (0%)**  `░░░░░░░░░░░░░░░░░░
 
 **Common Equations / Glossary**
 
-Progress: **0/2 (0%)**  `░░░░░░░░░░░░░░░░░░░░`
+Progress: **2/2 (100%)**  `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓`
 
 | Section | Done | In-progress | Todo | Skip | Total | % |
 |---|---:|---:|---:|---:|---:|---:|
-| Common Equations | 0 | 0 | 1 | 0 | 1 | 0% |
-| Glossary | 0 | 0 | 1 | 0 | 1 | 0% |
+| Common Equations | 1 | 0 | 0 | 0 | 1 | 100% |
+| Glossary | 1 | 0 | 0 | 0 | 1 | 100% |
