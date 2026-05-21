@@ -99,12 +99,10 @@ function walk(nodes, topIdx, level2Title) {
 
 walk(master.tree.n, null, null);
 
-// Convert to array and sort: module -> section -> title
-const entries = [...urlEntries.values()].sort((a, b) => {
-  if (a.module !== b.module) return a.module.localeCompare(b.module);
-  if (a.section !== b.section) return (a.section || '').localeCompare(b.section || '');
-  return a.title.localeCompare(b.title);
-});
+// Preserve depth-first TOC order from the walk above.
+// This keeps section ordering aligned with the original product structure
+// instead of re-sorting sections alphabetically inside each module.
+const entries = [...urlEntries.values()];
 
 const payload = {
   schema_version: 1,
