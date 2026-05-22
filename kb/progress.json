@@ -76,8 +76,8 @@
       "moduleTitle": "Getting Started with Aspen Unified",
       "section": "Getting Started",
       "status": "done",
-      "notes": "Covered in getting-started.md",
-      "updated_at": "2026-05-20T17:13:52Z"
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:25Z"
     },
     {
       "url": "/Content/html/UnifiedHome/Backstage.htm",
@@ -505,9 +505,9 @@
       "module": "pims",
       "moduleTitle": "Using Aspen Unified PIMS and Aspen Multi-Site PIMS ",
       "section": "Single Site Model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:25Z"
     },
     {
       "url": "/Content/html/UnifiedPIMS/simulation-summary.htm",
@@ -3115,9 +3115,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Using Aspen Unified Scheduling",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "skip",
+      "notes": "Navigation/UI utility - no KB value",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/gantt-work-area.htm",
@@ -3125,9 +3125,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/InvenGrid-work-area.htm",
@@ -3135,9 +3135,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/BlendCalculatorDB.htm",
@@ -3145,9 +3145,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/CaseComparison.htm",
@@ -3155,9 +3155,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/AutoRigorousSimulation.htm",
@@ -3165,9 +3165,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/EventTypes.htm",
@@ -3175,9 +3175,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/EventDetailsDB.htm",
@@ -3185,9 +3185,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/BlendEventDB.htm",
@@ -3195,9 +3195,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/FeedUnitEventDB.htm",
@@ -3205,9 +3205,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/Mixer_SplitterEventDB.htm",
@@ -3215,9 +3215,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/PropertyChangeEventDB.htm",
@@ -3225,9 +3225,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ReceiptEventDB.htm",
@@ -3235,9 +3235,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ScheduleBiasEventDB.htm",
@@ -3245,9 +3245,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ShipmentEventDB.htm",
@@ -3255,9 +3255,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/TransferEventDB.htm",
@@ -3265,9 +3265,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/UnitOperationsEventDB.htm",
@@ -3275,9 +3275,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/DeliveryStrategies.htm",
@@ -3285,9 +3285,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/SchedulingTrends.htm",
@@ -3295,9 +3295,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/BulkEventEditor.htm",
@@ -3305,9 +3305,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/colorPicker.htm",
@@ -3315,9 +3315,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "skip",
+      "notes": "Navigation/UI utility - no KB value",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/OverlappingEventAlerts.htm",
@@ -3325,9 +3325,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedPIMS/CreatingGanttChart.htm",
@@ -3335,9 +3335,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "skip",
+      "notes": "Generic Gantt creation page; minimal standalone AUS KB value",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/BPDImport.htm",
@@ -3345,9 +3345,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ImportingEvents.htm",
@@ -3355,9 +3355,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/PlanningTargets.htm",
@@ -3365,9 +3365,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/SingleBlendOptOverview.htm",
@@ -3375,9 +3375,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/sbo-settings.htm",
@@ -3385,9 +3385,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/VisualizePipeline.htm",
@@ -3395,9 +3395,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Work Area",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - Work Area/Event slice",
+      "updated_at": "2026-05-21T17:59:03"
     },
     {
       "url": "/Content/html/UnifiedScheduling/flowsheet.htm",
@@ -3405,9 +3405,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/FSObjProperties.htm",
@@ -3415,9 +3415,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/AddMultipleTanks.htm",
@@ -3425,9 +3425,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:25Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/CodeEditorJSWrappers.htm",
@@ -3435,9 +3435,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/MixPropertiesInclusivelyWhenBlending.htm",
@@ -3445,9 +3445,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ImportingSubmodelSim_ConfigInformation.htm",
@@ -3455,9 +3455,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/addTowerYieds.htm",
@@ -3465,9 +3465,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ParameterGroupDB.htm",
@@ -3475,9 +3475,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/SettingUpAUSDistillationMode.htm",
@@ -3485,9 +3485,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:25Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ScheduleByException.htm",
@@ -3495,9 +3495,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/envelopes-summary.htm",
@@ -3505,9 +3505,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Flowsheet",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/property-summary.htm",
@@ -3515,9 +3515,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/material-summary.htm",
@@ -3525,9 +3525,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/SimulationOverview.htm",
@@ -3535,9 +3535,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/SimulationSummarySubject.htm",
@@ -3545,9 +3545,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/SimulationConfigurationScreen.htm",
@@ -3555,9 +3555,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/Location-summary.htm",
@@ -3565,9 +3565,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/data-acquisition.htm",
@@ -3575,9 +3575,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/DistillModeSummaryScreen.htm",
@@ -3585,9 +3585,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/DistillModeDetails.htm",
@@ -3595,9 +3595,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/abml-correlation-summary.htm",
@@ -3605,9 +3605,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/custom-correlations.htm",
@@ -3615,9 +3615,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/EventAttributGroups.htm",
@@ -3625,9 +3625,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/PlanningTargets_Importing.htm",
@@ -3635,9 +3635,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/PlanningTargets_Mapping.htm",
@@ -3645,9 +3645,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/catalog.htm",
@@ -3655,9 +3655,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/site-catalog.htm",
@@ -3665,9 +3665,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Data",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/Reconciliation.htm",
@@ -3675,9 +3675,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Reconciliation",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/OverviewRollingForwardEvents.htm",
@@ -3685,9 +3685,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Reconciliation",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:25Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/job-status.htm",
@@ -3695,9 +3695,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Cases",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/AUSReports.htm",
@@ -3705,9 +3705,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Cases",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/MBOOverview.htm",
@@ -3715,9 +3715,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Cases",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/AUSOptimizer.htm",
@@ -3725,9 +3725,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Cases",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/Diagnostics.htm",
@@ -3735,9 +3735,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Cases",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/Case-Summary.htm",
@@ -3745,9 +3745,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Cases",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/general-settings.htm",
@@ -3755,9 +3755,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Settings",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/Solver-Settings.htm",
@@ -3765,9 +3765,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Settings",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/report-settings.htm",
@@ -3775,9 +3775,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Settings",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/GenerateSubmodelReports.htm",
@@ -3785,9 +3785,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Model Settings",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/BlendDetails.htm",
@@ -3795,9 +3795,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Reports",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/Metrics.htm",
@@ -3805,9 +3805,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "AUS Metrics",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ChangeSimHorizonDB.htm",
@@ -3815,9 +3815,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Aspen Unified Scheduling Screens/Dialog Boxes",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/CreateScheduleModelDB.htm",
@@ -3825,9 +3825,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Aspen Unified Scheduling Screens/Dialog Boxes",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/InitialSimStateDB.htm",
@@ -3835,9 +3835,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Aspen Unified Scheduling Screens/Dialog Boxes",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/LimitSettingDB.htm",
@@ -3845,9 +3845,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Aspen Unified Scheduling Screens/Dialog Boxes",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/publishResultsDB.htm",
@@ -3855,9 +3855,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Aspen Unified Scheduling Screens/Dialog Boxes",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/RecurringEventsDB.htm",
@@ -3865,9 +3865,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Aspen Unified Scheduling Screens/Dialog Boxes",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/RunOptimizerDialogBox.htm",
@@ -3875,9 +3875,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Aspen Unified Scheduling Screens/Dialog Boxes",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/TrendSettingDB.htm",
@@ -3885,9 +3885,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Aspen Unified Scheduling Screens/Dialog Boxes",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/AUSBlending.htm",
@@ -3895,9 +3895,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md",
+      "updated_at": "2026-05-21T17:42:06"
     },
     {
       "url": "/Content/html/UnifiedScheduling/SavedSimulationStates.htm",
@@ -3905,9 +3905,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/CrudeUnitDelayTransfer.htm",
@@ -3915,9 +3915,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/publishResults.htm",
@@ -3925,9 +3925,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Read and summarized in scheduling.md - simulation/reporting/admin slice",
+      "updated_at": "2026-05-21T18:04:07"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ExcelAddIn/Getting_Started.htm",
@@ -3935,9 +3935,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ExcelAddIn/ConnectModelPanel.htm",
@@ -3945,9 +3945,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ExcelAddIn/CreateWorksheetPanel.htm",
@@ -3955,9 +3955,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ExcelAddIn/GlobalSettings.htm",
@@ -3965,9 +3965,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/UnifiedScheduling/ExcelAddIn/RibbonOptions.htm",
@@ -3975,9 +3975,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:46Z"
     },
     {
       "url": "/Content/html/GraphQL.htm",
@@ -3985,9 +3985,9 @@
       "module": "scheduling",
       "moduleTitle": "Using Aspen Unified Scheduling",
       "section": "Working with an AUS model",
-      "status": "todo",
-      "notes": "",
-      "updated_at": null
+      "status": "done",
+      "notes": "Slice 3 - covered in scheduling.md",
+      "updated_at": "2026-05-22T10:19:25Z"
     },
     {
       "url": "/Content/html/UnifiedGDOT/AUG_miniTOC.htm",

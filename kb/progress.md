@@ -4,10 +4,10 @@ _Generated from `progress.json` (648 unique topics). Re-run `node _build-progres
 
 ## Overall
 
-**115 done · 0 in-progress · 521 todo · 12 skip · 18%**
+**201 done · 0 in-progress · 432 todo · 15 skip · 32%**
 
 ```
-▓▓▓▓░░░░░░░░░░░░░░░░  18%
+▓▓▓▓▓▓░░░░░░░░░░░░░░  32%
 ```
 
 ## Modules
@@ -16,8 +16,8 @@ _Generated from `progress.json` (648 unique topics). Re-run `node _build-progres
 |---|---:|---:|---:|---:|---:|---:|---|
 | [Welcome / What's New](#module-welcome) | 1 | 0 | 0 | 4 | 1 | 100% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓` |
 | [Getting Started with Aspen Unified](#module-getting-started) | 8 | 0 | 1 | 5 | 9 | 89% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░` |
-| [Aspen Unified PIMS / Multi-Site PIMS](#module-pims) | 0 | 0 | 291 | 0 | 291 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
-| [Aspen Unified Scheduling](#module-scheduling) | 0 | 0 | 88 | 0 | 88 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
+| [Aspen Unified PIMS / Multi-Site PIMS](#module-pims) | 1 | 0 | 290 | 0 | 291 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
+| [Aspen Unified Scheduling](#module-scheduling) | 85 | 0 | 0 | 3 | 85 | 100% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓` |
 | [Aspen Unified GDOT Builder](#module-gdot) | 0 | 0 | 63 | 0 | 63 | 0% | `░░░░░░░░░░░░░░░░░░░░` |
 | [Aspen Unified Reconciliation and Accounting](#module-aura) | 58 | 0 | 0 | 1 | 58 | 100% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓` |
 | [Aspen Unified Movements](#module-aum) | 40 | 0 | 0 | 1 | 40 | 100% | `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓` |
@@ -62,12 +62,12 @@ Progress: **8/9 (89%)**  `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 
 **Aspen Unified PIMS / Multi-Site PIMS**
 
-Progress: **0/291 (0%)**  `░░░░░░░░░░░░░░░░░░░░`
+Progress: **1/291 (0%)**  `░░░░░░░░░░░░░░░░░░░░`
 
 | Section | Done | In-progress | Todo | Skip | Total | % |
 |---|---:|---:|---:|---:|---:|---:|
 | Using Aspen Unified PIMS and Aspen Multi-Site PIMS  | 0 | 0 | 1 | 0 | 1 | 0% |
-| Single Site Model | 0 | 0 | 240 | 0 | 240 | 0% |
+| Single Site Model | 1 | 0 | 239 | 0 | 240 | 0% |
 | Multi-Site PIMS  Model | 0 | 0 | 23 | 0 | 23 | 0% |
 | Unified Planning Concepts/References | 0 | 0 | 26 | 0 | 26 | 0% |
 | AUP Troubleshooting | 0 | 0 | 1 | 0 | 1 | 0% |
@@ -76,21 +76,21 @@ Progress: **0/291 (0%)**  `░░░░░░░░░░░░░░░░░�
 
 **Aspen Unified Scheduling**
 
-Progress: **0/88 (0%)**  `░░░░░░░░░░░░░░░░░░░░`
+Progress: **85/85 (100%)**  `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓`
 
 | Section | Done | In-progress | Todo | Skip | Total | % |
 |---|---:|---:|---:|---:|---:|---:|
-| Using Aspen Unified Scheduling | 0 | 0 | 1 | 0 | 1 | 0% |
-| Work Area | 0 | 0 | 28 | 0 | 28 | 0% |
-| Flowsheet | 0 | 0 | 11 | 0 | 11 | 0% |
-| Model Data | 0 | 0 | 16 | 0 | 16 | 0% |
-| Reconciliation | 0 | 0 | 2 | 0 | 2 | 0% |
-| Cases | 0 | 0 | 6 | 0 | 6 | 0% |
-| Model Settings | 0 | 0 | 4 | 0 | 4 | 0% |
-| Reports | 0 | 0 | 1 | 0 | 1 | 0% |
-| AUS Metrics | 0 | 0 | 1 | 0 | 1 | 0% |
-| Aspen Unified Scheduling Screens/Dialog Boxes | 0 | 0 | 8 | 0 | 8 | 0% |
-| Working with an AUS model | 0 | 0 | 10 | 0 | 10 | 0% |
+| Using Aspen Unified Scheduling | 0 | 0 | 0 | 1 | 0 | 0% |
+| Work Area | 26 | 0 | 0 | 2 | 26 | 100% |
+| Flowsheet | 11 | 0 | 0 | 0 | 11 | 100% |
+| Model Data | 16 | 0 | 0 | 0 | 16 | 100% |
+| Reconciliation | 2 | 0 | 0 | 0 | 2 | 100% |
+| Cases | 6 | 0 | 0 | 0 | 6 | 100% |
+| Model Settings | 4 | 0 | 0 | 0 | 4 | 100% |
+| Reports | 1 | 0 | 0 | 0 | 1 | 100% |
+| AUS Metrics | 1 | 0 | 0 | 0 | 1 | 100% |
+| Aspen Unified Scheduling Screens/Dialog Boxes | 8 | 0 | 0 | 0 | 8 | 100% |
+| Working with an AUS model | 10 | 0 | 0 | 0 | 10 | 100% |
 
 ## Module: gdot
 
