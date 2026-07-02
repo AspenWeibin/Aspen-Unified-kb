@@ -3,17 +3,6 @@
 > **Source:** `Content/html/UnifiedAURA/`
 > **Version:** Aspen Unified V15.0.5
 
-## Quick Map
-
-Use this section as the local table of contents for fast navigation inside the AURA KB.
-
-- **Getting started:** [Overview](#overview) · [Creating a New AURA Model](#creating-a-new-aura-model) · [Model Management](#model-management)
-- **Model setup and structure:** [Work Areas](#work-areas) · [Model Data and Integration](#model-data-and-integration) · [Model Settings](#model-settings) · [Flowsheet](#flowsheet)
-- **Operational analysis:** [Overview Dashboard](#overview-dashboard) · [Sankey Diagrams](#sankey-diagrams) · [Cases and Case Calendar](#cases-and-case-calendar) · [Case Analysis and Reconciliation](#case-analysis-and-reconciliation)
-- **Operational objects:** [Events](#events) · [Envelopes](#envelopes) · [Data Trends](#data-trends)
-- **Imports and external integration:** [Importing Object Data and Events from Excel (Case Context)](#importing-object-data-and-events-from-excel-case-context) · [Importing Events and Tank Data from AUM](#importing-events-and-tank-data-from-aum) · [Data Hub](#data-hub)
-- **Reference and advanced topics:** [Version History Details](#version-history-details) · [Reports](#reports) · [Migrating from AORA to AURA](#migrating-from-aora-to-aura)
-
 ## Overview
 
 AURA is a plant material tracking and yield accounting system. A model of the processing plant tracks material receipts, shipments, internal movements, and inventories. The model can represent the physical plant closely or more virtually, depending on tracking and reporting requirements. AURA supports plant performance analysis and yield accounting functions.
@@ -29,6 +18,70 @@ AURA is a plant material tracking and yield accounting system. A model of the pr
 AURA includes a solver that calculates unmeasured flows, identifies and reconciles data discrepancies, and reviews all reconciliation results. It reconciles based on user-selected strategies and error distribution techniques, enabling meaningful reports even with incomplete information.
 
 The solver **balances objects** (tanks, tank groups, pipelines, process units, manifolds, blend headers) by making **minimum adjustments** to flows (streams/events) to resolve gross errors or random errors. Density errors are also resolved when the **simultaneous** option is used.
+
+---
+
+## Migrating an AORA Model to AURA
+
+The **AORA to AURA Migration Utility** loads an AORA Access database and creates a new AURA model with migrated configuration, flowsheet topology, and optionally case data. Aspen explicitly positions it as a **starting point** rather than a complete one-click conversion: post-migration cleanup is usually required.
+
+### Prerequisites
+
+- An AORA `.mdb` or `.accdb` file
+- Access to `PSCAdmin.exe` under `<Aspen Unified install>\Admin\CLI`
+- Permission to write to the target Aspen Unified SQL database
+- Familiarity with command-line execution
+- **64-bit Microsoft Access / Office runtime**
+
+> **Important:** if the machine has only 32-bit Office/Access components, the migration utility will not work correctly.
+
+### CLI workflow
+
+| Mode | Example pattern | Notes |
+|---|---|---|
+| **Base model + case data** | `PSCAdmin migrate-aora-model --databaseServer <server> --databaseName <db> --AORAInputDb "<file.mdb>" --importCaseData True --caseStartTime "YYYY-MM-DD HH:MM:SS" --caseEndTime "YYYY-MM-DD HH:MM:SS" --logDir <path>` | Imports base model and all case data in the selected time range |
+| **Base model only** | `PSCAdmin migrate-aora-model --databaseServer <server> --databaseName <db> --AORAInputDb "<file.mdb>" --baseModelCase "YYYY-MM-DD HH:MM:SS" --logDir <path>` | Creates only the base model using the chosen case date |
+
+### Key parameters
+
+| Parameter | Required | Meaning |
+|---|---|---|
+| `--databaseServer` | Yes | SQL Server hosting the destination Aspen Unified database |
+| `--databaseName` | Yes | Existing Aspen Unified database where the new model will be created |
+| `--AORAInputDb` | Yes | Full quoted path to the AORA Access database |
+| `--importCaseData` | Optional | `True` imports case data; `False` migrates base model only |
+| `--caseStartTime` / `--caseEndTime` | Conditional | Required when importing case data |
+| `--baseModelCase` | Conditional | Used for base-model-only migration; otherwise AURA falls back to `PlantOperatingDay` from `OLOCONFIG` |
+| `--logDir` | Optional | Saves the migration log to disk |
+| `--doNotPublish` | Optional | Test migration without publishing/creating the model in Unified |
+
+### What the utility migrates automatically
+
+- **Model data** such as properties, materials, strapping tables, reconciliation basis, and engineering-unit preferences
+- **Flowsheet topology and object configuration**
+- **Case data** for the selected date range
+- **AORA instruments as AURA attributes** rather than standalone objects
+- **Measurement flags** on streams when active AORA pipe instruments exist
+
+### Common AORA → AURA mappings
+
+| AORA concept | AURA result |
+|---|---|
+| Receiving / Shipping / Production / Consumption Dock | Same boundary templates in AURA |
+| Tank / Floating Roof Tank | **Tank** |
+| Subsystem | **Tank Group** |
+| Manifold | **Manifold** |
+| Blend Header | **Blend Header** |
+| Column / Reactor | **Process Unit** |
+| Permanent Pipe | **Stream** |
+| Tank instruments | Tank attributes |
+| Pipe / flow instruments | Stream attributes |
+
+### Migration caveats
+
+- The created AURA model name comes from the AORA `OLOCONFIG.ModelName` field; if that name already exists in Unified, the migration fails and the conflict appears in the log.
+- Aspen recommends post-migration cleanup such as bulk edits or Excel-based updates before putting the model into production use.
+- Some AORA content is **not migrated**, including components, quality codes, graphic images/strings, variables, transaction/accounting structures, and mapping-type configuration.
 
 ---
 
@@ -193,6 +246,98 @@ From the **Selected Variables** tab, you can edit or delete existing variable de
 - **Select the Variables** — choose variable definition from drop-down
 - **Enter Latest** — show the most recent N cases (mutually exclusive with time range)
 - **Specify a Time Range** — define Start and End times within the selected Analysis time frame
+
+---
+
+## Data Hub
+
+The **Data Hub** imports third-party data into Aspen Unified as external **JSON documents**. In AURA, those documents can update existing object case data or create/update events.
+
+**Permission requirement:** you must have the **Creator** role on the model to use Data Hub actions.
+
+### Supported imported data
+
+| Data type | What it can carry |
+|---|---|
+| **Objects data** | Object name, attribute names/values, composition type and values |
+| **Events data** | Event name, start/stop time, source, destination, attributes, and compositions |
+
+### Data Hub summary page
+
+The summary page shows all posted documents, including ones already applied before.
+
+#### Status area
+
+| Indicator | Meaning |
+|---|---|
+| **Pending** | Number of documents not yet applied/integrated |
+| **Applied** | Number of documents already applied |
+
+#### Data Hub table columns
+
+| Column | Meaning |
+|---|---|
+| **Name** | Imported file name |
+| **Type** | `AuraObjects` or `AuraEvents` |
+| **Status** | `Pending` or `Applied` |
+| **Date Imported** | Import timestamp |
+| **Date Applied** | When the document was last applied |
+| **Applied By** | User who applied it |
+| **Comment** | Optional comment from the document header |
+
+#### Data Hub actions
+
+| Action | Notes |
+|---|---|
+| **Apply Data to Cases** | Select one or more rows and click **Next** to open the Apply Data page |
+| **Export visible table** | Downloads `DataHub.xlsx` |
+| **Delete document** | Remove selected documents from the table |
+| **Download selected data** | Downloads the raw selected document data |
+
+### Apply Data workflow
+
+Applying imported data is a guided four-step process:
+
+1. **Validate Data** — AURA lists candidate Analyses and cases; cases can be removed before apply
+2. **Select Create +** — add target Analyses and cases (for Events, AURA can add them automatically)
+3. **Review** — inspect the selected Analysis/case tabs and review the proposed data changes
+4. **Apply** — confirm the summary and click **Apply All Data**
+
+After a successful apply, AURA shows a green confirmation toast. If warnings exist, the **Warnings** button becomes available.
+
+### Apply Data table behavior
+
+- Values that differ from current case values are **highlighted**
+- **Blue** values are editable before apply
+- Hovering cells can show both the external-file value and the current case value
+- Warnings/error text can be downloaded as `Warnings.txt`
+
+#### Event-data columns
+
+- Analysis and Case name
+- Template
+- Source and Destination
+- Start and Stop times
+- Property attribute names and values
+- Ending composition values (volume % / mass %)
+
+**Timing rules for event data:**
+- Start and end must fall within the selected case range
+- If end time is missing, AURA uses the case end time
+- If start time is missing but end exists, AURA uses the case start time
+
+#### Object-data columns
+
+- Analysis and Case name
+- Optional template
+- Attribute names and values
+
+### Operational notes
+
+- A red notification dot on the Data Hub icon indicates pending documents
+- A green toast can also open/refresh the Data Hub when new external data becomes available
+- Sample JSON payloads are stored under `...\Users\Public\Documents\AspenTech\Aspen Unified\ASPEN_UNIFIED_API_EXAMPLES`
+- Aspen also exposes APIs for formatting and sending documents into the Data Hub
 
 ---
 
@@ -1341,6 +1486,119 @@ Typical follow-up focus areas:
 
 ---
 
+## Reports
+
+AURA provides report pages for a **single case** or a **selected case range** from the Application Bar. Most reports support the same baseline interaction model: choose an Analysis/case range, optionally filter or pivot the grid, and export the result.
+
+### Access and shared behavior
+
+**Access:** Navigation Panel → **Reports** → choose a report type, or search by name.
+
+Common capabilities across report pages:
+
+- select a **case range** from the Application Bar calendar
+- use **Report Settings** to control labels and page layout
+- use **pivot/grouping** where supported
+- collapse/expand report sections with section headers
+- create charts from table data
+- clear filters from the toolbar
+- export the current view or full report output
+
+### Available report types
+
+| Report | Primary use |
+|---|---|
+| **Composition Tracking** | Track storage/flow composition across selected cases |
+| **Emissions** | Review emitters, totals, and hierarchy/list views |
+| **Envelope Trend** | Trend daily inventory/imbalance/flow data for an object or envelope |
+| **Material Balance** | Compare inventory, reclassification, inputs, and outputs by material |
+| **Plan vs Actual** | Compare AUP planning targets against reconciled AURA actuals |
+| **Production Balance** | Plant-wide production/loss summary across boundary flows and inventories |
+| **Receipts & Shipments** | Boundary-object summary for receipts, produced, shipped, and consumed flows |
+| **Tank Inventory** | Tank inventory snapshot/range grouped by material or tank |
+| **Tank Balance** | Tank inputs, outputs, and inventory balance |
+| **Unit Balance** | Input/output reconciliation details for units, manifolds, blend headers, and envelopes |
+| **Unit Summary** | Unit-level totals and gain/loss summary |
+
+### Download Reports dialog
+
+The **Download Reports** dialog supports bulk export of one or more reports based on the **currently selected case**.
+
+#### Download workflow
+
+1. Open the dialog from the flowsheet Application Bar
+2. Add one or more rows
+3. Assign or create a **Group** name
+4. Select the **Report** type
+5. Choose a **Time Context**
+6. If using **Custom**, set Start and End
+7. Select the rows/group to export
+8. Enter the output file name
+9. Click **Download**
+10. Optionally click **Save Changes** to store the table as the default download layout
+
+#### Time Context options
+
+| Option | Coverage |
+|---|---|
+| **Current Case** | Only the currently selected case |
+| **Week to Date / Month to Date / Quarter to Date / Year to Date** | Cases from the period start through the selected case |
+| **Week / Month / Quarter / Year** | All cases in the selected calendar period |
+| **Custom** | Cases whose start time falls within the specified range |
+
+#### Download file behavior
+
+| Condition | Output |
+|---|---|
+| **One report selected** | `<reportType>_<modelName>.xlsx` |
+| **Multiple reports or a group** | `<File Name>_Report.zip` |
+| **Files inside ZIP** | One `<reportType>_<modelName>.xlsx` per report |
+
+### Unit and envelope-oriented reports
+
+| Report | Highlights |
+|---|---|
+| **Unit Balance** | Focuses on a selected unit/envelope. Shows input/output flow identity plus measured, user-adjusted, system-adjusted, reconciled volume and mass, properties, and total loss/gain. For multi-case ranges, property columns are omitted. |
+| **Unit Summary** | Summarizes process units, blend headers, and manifolds. Shows unit description, status, template, volume gain factor, total input/output, and reconciled gain/loss for both mass and volume. |
+| **Envelope Trend** | One row per selected case. Shows beginning/ending inventory plus measured, reconciled, system-adjusted, and user-adjusted input/output columns over time. Includes a display option to merge event columns by `Source_Destination` instead of raw event names. |
+
+### Tank and material inventory reports
+
+| Report | Highlights |
+|---|---|
+| **Tank Inventory** | Group by **Material** or **Tank**. Tracks net, gross, gauge, fraction gauge, free water, density/temperature, net change, and available capacity. Tanks with no configured stream material fall under **NOMATERIALS**. |
+| **Tank Balance** | Group by **Material** or **Tank**. Shows beginning/ending inventory, change, balance, and categorized inputs/outputs (storage, process unit, receiving/shipping/consumption/production docks, other). Disabled tanks, tank groups, and pipelines do not appear. |
+| **Material Balance** | Shows inventory beginning/ending/balanced values, reclassification from/to, and categorized inputs/outputs by material. Useful for material-centric reconciliation review rather than object-centric review. |
+
+### Plant boundary and performance reports
+
+| Report | Highlights |
+|---|---|
+| **Receipts & Shipments** | Summarizes all flows connected to boundary objects. Groups rows into **Receipts**, **Produced**, **Shipments**, and **Consumed**. Disabled streams/events are excluded. |
+| **Production Balance** | Plant-level production summary for the selected time range. Uses inventories plus receipts/produced/shipped/consumed flows and supports grouping by **Material Parent Class** / **Class**. Also exposes gross plant margin, total operating cost, and net operating margin when material prices are available. |
+| **Plan vs Actual** | Compares AUP planning targets from the Site Catalog to reconciled AURA actuals. Supports material trend charts, `Mass/Volume` toggle, cumulative vs daily vs cumulative average measures, and handles many-to-one / one-to-many material mapping between AUP and AURA. Proper Site Catalog linking and published planning targets are prerequisites. |
+
+### Composition and emissions reports
+
+| Report | Highlights |
+|---|---|
+| **Composition Tracking** | Supports **Storage** and **Flow** views. Storage reports show beginning composition from the first case and ending composition from the last case; flow reports aggregate streams across the case range while events are listed case-by-case. Shows enabled flag, density, and mass/volume composition percentages. |
+| **Emissions** | Reports emitter attributes and plant totals. Supports **Hierarchy** and **List** views; hierarchy view nests child emitters below parent emitters. The page also shows an emitter treemap for visual inspection. |
+
+### Export conventions
+
+Nearly all report pages support:
+
+- **Export in grid format** — current displayed table to `..._Grid.xlsx`
+- **Export to Excel** — full report dataset to `.xlsx`
+- **Export to PDF** — full report dataset to `.pdf`
+
+The exact file name usually follows:
+
+`<ModelName>_<AnalysisName>_<ReportNameLabel>_<StartD&T>_<EndD&T>[ _Grid ].<ext>`
+
+---
+
 ## Events
 
 AURA Events are created within a **case context** (not on the Base Model). An event has a defined Start and Stop time within the case time frame, a Source, and a Destination object.
@@ -1564,255 +1822,4 @@ Base model changes tracked include: Object updates, Properties, Materials, Data 
 | **Export** | Exports current grid to `<modelName>_Version_History.xlsx` in Downloads folder. Hidden columns excluded. |
 | **Group by column** | If "Column drop zone" is enabled in Display Settings, drag column headers to the drop zone to group data. |
 | **Clear filters** | Available when filters are applied. |
-
----
-
-## Reports
-
-AURA reports are opened from the left-hand **Model Navigation Panel** using the **Reports** icon. Reports run against the currently selected Analysis/case context, and most pages allow either a single case or a selected date range / case range from the Application Bar calendar.
-
-### Shared report behaviors
-
-- Use the report search box to jump directly to a report by name.
-- Most reports support **pivot/group by**, column reordering, collapse/expand of grouped sections, charting from table data, and **Clear Filters**.
-- Report layout, labels, and some display rules come from **Model Settings → Report Settings**.
-- Exports are typically available as **Grid Excel**, **Excel**, and **PDF**.
-- Several reports expose a chart at the bottom of the page that reflects the current table filters and grouping.
-
-### Bulk report download dialog
-
-Use the **Download Reports** dialog from the Application Bar to bundle one or more report exports for the current case context.
-
-**Workflow:**
-1. Add one or more rows to the downloads table.
-2. Choose or create a **Group** name; only **Owner** and **Case Author** can edit report groups.
-3. Select **Report** and **Time Context**.
-4. For **Custom** time context, enter explicit **Start** and **End** timestamps.
-5. Select individual reports or a saved group, enter the output **File Name**, then click **Download**.
-6. Click **Save Changes** if you want the current table to become the default download setup in **Report Settings → Downloads**.
-
-| Time Context | Scope |
-|---|---|
-| **Current Case** | Current selected case only |
-| **Week to Date / Month to Date / Quarter to Date / Year to Date** | Period up to the current selected case |
-| **Week / Month / Quarter / Year** | Full selected calendar period |
-| **Custom** | Cases whose start time falls within a custom start/end range |
-
-**Download naming rules:**
-- Single report: `<reportType>_<modelName>.xlsx`
-- Multiple reports or a report group: `<fileName>_Report.zip`
-- Files inside ZIP: `<reportType>_<modelName>.xlsx`
-
-### Report catalog
-
-| Report | Best for | Main controls / grouping | Notable data surfaces |
-|---|---|---|---|
-| **Composition Tracking** | Tracking storage and flow composition changes across selected cases | **Storage** vs **Flow** tabs; group by storage/flow | Storage shows first-case beginning and last-case ending composition; Flow shows stream/event composition details with **Source** and **Destination**; includes **CompTrack Enabled** and **Density** |
-| **Emissions** | Reviewing emitter totals and hierarchy | **Hierarchy** vs **List** view | Tree map of parent/child emitters; total emissions shown at top; columns are emitter attributes |
-| **Envelope Trend** | Daily trend review for one object or envelope | Filter by **Object/Envelope** and **Solution Status** | Per-case rows; measured/reconciled/system/user adjustment sections; optional event-column consolidation by **Source_Destination** |
-| **Material Balance** | Material-level inventory, reclassification, and transfer balancing | **Mass** vs **Volume** tabs | Inventory beginning/ending/balanced; reclassification from/to; input and output totals by storage, units, docks, and other |
-| **Plan vs Actual** | Comparing AUP planning targets with AURA actuals | **Mass/Volume**, **Material**, **Measure** = Cumulative / Daily Value / Cumulative Average | Planned vs actual trend lines; columns for **Plan**, **Actual**, **Measured**, **Plan Deviation**, **Plan Deviation %**, totals and averages |
-| **Production Balance** | Material production accounting over one case or a range | Single-case vs multi-case behavior | Inventory, receipts, produced, shipped, consumed, reclass, production %, price, and cost |
-| **Receipts and Shipments** | Material movement audit by receipt/production/shipment/consumption | Rows grouped by movement type | Material, stream/event, source/destination, and measured / user-adjusted / system-adjusted / reconciled mass and volume |
-| **Tank Balance** | Tank-level inventory balance by tank or material | Group by **Material** or **Tank**; **Mass** vs **Volume** tabs | Inventory beginning/ending/change/balance plus input/output totals by storage, units, and docks |
-| **Tank Inventory** | Tank inventory snapshot and capacity review | Group by **Material** | Net/gross/gauge/fraction gauge/free water/gauge water, mass net/gross/net change, tank properties, and available capacity |
-| **Unit Balance** | Balancing a selected process unit, manifold, blend header, or envelope | Filter by **Unit/Envelope** and **Solution Status** | Input/output rows, mass/volume adjustments, reconciled values, and total loss/gain |
-| **Unit Summary** | Cross-unit summary for process units, manifolds, and blend headers | Aggregation and pivot-friendly summary layout | Status, template, **Vol_Gain_Factor**, total input/output, reconciled loss/gain, and percentage summaries |
-
-### Key formulas and report-specific caveats
-
-| Report | Important logic |
-|---|---|
-| **Material Balance** | `Balanced = InventoryEnding - TransfersFromTotal + TransfersToTotal - InventoryBeginning - (ReclassificationFrom - ReclassificationTo)` |
-| **Plan vs Actual** | `Actual = Measured + User Adjustment + System Adjustment`; `Plan Deviation = Actual - Plan`; `Plan Deviation % = (Actual - Plan) / Plan * 100%` |
-| **Production Balance** | `Production = Inventory Beginning + Receipts + Produced - Inventory Ending - Shipments - Consumed`; `% Production = Production / Sum of Production for Charges * 100` |
-| **Unit Balance** | `Total Loss/Gain = Total Output - Total Input`; in case-range mode, **Density / Temperature / Pressure** columns are not shown |
-| **Tank Balance** | `Balance = InventoryEnding - TransfersFromTotal + TransfersToTotal - InventoryBeginning` |
-| **Envelope Trend** | Event columns can be merged by **Source_Destination** to avoid one-column-per-event-name clutter when names change daily |
-| **Plan vs Actual** | Requires valid Site Catalog linking and published AUP planning targets; values marked with `*` remain in AUP units and are excluded from subtotals |
-
-### Report data patterns worth remembering
-
-- **Composition Tracking:** Storage composition is bookended by first-case beginning and last-case ending values; stream flows aggregate across selected cases, but events are shown per selected case rather than fully aggregated.
-- **Emissions:** Best used when the emitter hierarchy matters; list view is better for sorting, hierarchy view is better for plant structure.
-- **Envelope Trend / Unit Balance:** Both are good troubleshooting reports because they combine table details with charted imbalance / reconciled behavior over time.
-- **Plan vs Actual:** Supports **n:1** and **1:n** AURA↔AUP material linking through Site Catalog and AURA material configuration.
-- **Tank Inventory:** Fraction gauge display depends on **Report Settings**.
-- **Unit Summary:** **Vol_Gain_Factor** behaves differently by object type: process units use attribute values, manifolds / blend headers default to `1`, and envelopes multiply VGF across contained units.
-
----
-
-## Data Hub
-
-Data Hub imports third-party process data into AURA as external **JSON** documents. It is intended for controlled import of object data and events into existing models and cases.
-
-> **Role requirement:** the model user must have the **Creator** role to use Data Hub.
-
-### What Data Hub accepts
-
-| Document type | Typical payload |
-|---|---|
-| **AuraObjects** | Existing object name, attribute name/value pairs, composition type/value data |
-| **AuraEvents** | Event name, start/stop time, source, destination, attribute name/value pairs, composition type/value data |
-
-Notes:
-- Sample JSON documents are provided under `...\Users\Public\Documents\AspenTech\Aspen Unified\ASPEN_UNIFIED_API_EXAMPLES`
-- Swagger APIs can be used to format and send data into AURA Data Hub
-- Optional document **Comment** text can be stored in the JSON header
-
-### Notifications and entry points
-
-- On the Home page, a model with pending import data shows a **data available** indicator.
-- In the left navigation, the **Data Hub** icon shows a **red dot** when there are unapplied documents.
-- When external data arrives or changes, AURA raises a **green toast** with a link to open or refresh Data Hub.
-
-### Data Hub summary page
-
-The summary page has a top-right status area plus a table of all posted documents, including already applied ones.
-
-**Status area:**
-- **Pending** — documents not yet applied/integrated
-- **Applied** — documents already applied at least once
-
-**Table columns:**
-
-| Column | Meaning |
-|---|---|
-| **Name** | Imported document/file name |
-| **Type** | `AuraObjects` or `AuraEvents` |
-| **Status** | `Pending` or `Applied` |
-| **Date Imported** | When the document was posted |
-| **Date Applied** | When the document was last applied |
-| **Applied By** | User who applied the document |
-| **Comment** | Document header comment |
-
-**Available actions:**
-
-| Action | How it works |
-|---|---|
-| **Apply Data to Cases** | Select one or more documents, click **Next**, review on the Apply Data page, then apply |
-| **Export summary table** | Exports visible rows to `DataHub.xlsx` in Downloads |
-| **Delete documents** | Remove selected rows from the tray or use the row delete icon |
-| **Download selected data** | Downloads the selected imported documents |
-
-### Apply Data workflow
-
-The Apply Data page is a four-step workflow:
-
-1. **Validate Data** — validate imported data and optionally remove target cases.
-2. **Select Create +** — add analysis/case targets for object data; event imports do not require manual case creation because analysis/cases are added automatically.
-3. **Review** — inspect imported values by Analysis and Case tabs, moving case by case as needed.
-4. **Apply** — review the summary and click **Apply All Data**; success raises a green toast, and warnings appear through the **Warnings** button.
-
-### Apply Data review rules
-
-- Changed values are highlighted **yellow**
-- Values shown in **blue** are editable before apply
-- Each case gets its own row in the review table
-- Hovering editable cells shows both the external file value and current case value
-
-**Event data columns typically include:**
-- Analysis and Case
-- Template
-- Source and Destination
-- Start and Stop times
-- Attribute name/value pairs
-- Ending composition volume % / mass %
-
-**External event timing rules:**
-- Start and End must fall within the selected case range
-- Missing **End** defaults to case end time
-- Missing **Start** with present End defaults to case start time
-- Only fields present in the external file appear in the review table
-
-**Object data columns typically include:**
-- Analysis and Case
-- Optional template
-- Attribute name/value pairs
-
-### Warnings and logs
-
-- **Warnings** stays hidden unless validation or apply detects warnings/errors
-- Warning/error details can be exported as `Warnings.txt`
-- After apply, Data Hub updates the document **Status**, **Date Applied**, and **Applied By**
-
----
-
-## Migrating from AORA to AURA
-
-The **AORA to AURA Migration Utility** creates a new AURA model by pulling flowsheet, configuration, and daily case data from an AORA database. It automates most structural conversion, but post-migration cleanup is still expected.
-
-### Prerequisites
-
-- Source AORA `.mdb` or `.accdb` model database
-- Access to `PSCAdmin.exe` under `<AU install>\Program Files\AspenTech\Aspen Unified\Admin\CLI`
-- Permission to write to the SQL data server
-- Familiarity with command-line execution
-- **64-bit Microsoft Access** support; 32-bit Office/Access blocks migration
-
-### Migration commands
-
-Use an elevated command prompt in the `PSCAdmin.exe` folder.
-
-| Scenario | Command pattern |
-|---|---|
-| **Base model + cases** | `PSCAdmin migrate-aora-model --databaseServer <server> --databaseName <db> --AORAInputDb "<path>" --importCaseData True --caseStartTime "<YYYY-MM-DD HH:MM:SS>" --caseEndTime "<YYYY-MM-DD HH:MM:SS>" --logDir <path>` |
-| **Base model only** | `PSCAdmin migrate-aora-model --databaseServer <server> --databaseName <db> --AORAInputDb "<path>" --baseModelCase "<YYYY-MM-DD HH:MM:SS>" --logDir <path>` |
-
-Run `PSCAdmin migrate-aora-model -- help` to list all parameters.
-
-### Parameter highlights
-
-| Parameter | Use |
-|---|---|
-| `--databaseServer` | Target SQL server |
-| `--databaseName` | Existing AU database that will receive the new model |
-| `--AORAInputDb` | Full quoted path to the AORA Access DB |
-| `--importCaseData` | `True` to import case data; otherwise base-model-only flow is used |
-| `--caseStartTime` / `--caseEndTime` | Required when importing case data |
-| `--baseModelCase` | Base-model seed case when case data is not imported |
-| `--logDir` | Output folder for migration logs |
-| `--doNotPublish` | Test migration without publishing the new Unified model |
-
-### What the migration carries over
-
-- Flowsheet topology and layout
-- Object configuration, templates, and attributes
-- Case data (daily values)
-- UOM types / properties → **Model Data → Properties**
-- Products → **Model Data → Materials**
-- Strap tables → **Model Data → Strapping Table**
-- Reconciliation basis → **Cases & Analysis → Mass Reconciled / Volume Reconciled**
-- Engineering unit preferences → **Model Settings → General Settings**
-
-### Automatic conversion behavior
-
-- Objects are migrated from the selected time range, using the latest configuration available in that range
-- AORA **instrument** objects do not remain separate objects in AURA; their details are converted into **stream** or **tank** attributes
-- For streams, active AORA pipe instruments set **Measurement = True** automatically; unmeasured streams get **Measurement = False** and are expected to be solver-calculated during reconciliation
-- AURA does not create attributes for AORA fields that are empty for every object
-
-### Major object mapping patterns
-
-| AORA source | AURA result |
-|---|---|
-| Receiving / Shipping / Production / Consumption Dock | Same dock template in AURA |
-| Column / Reactor | **Process Unit** |
-| Manifold | **Manifold** |
-| Blend Header | **Blend Header** |
-| Subsystem | **Tank Group** |
-| Tank (regular / floating roof) | **Tank** |
-| Tank gauges / tank lab instruments | Tank attributes |
-| Permanent Pipe | **Stream** |
-| Pipe / meter / flow lab instruments | Stream attributes |
-
-### Known non-migrated categories
-
-The utility does **not** migrate several AORA-only support definitions such as Components, Quality Codes, Graphic Images, Graphic Strings, Variables, Transaction Types, Accounting Codes / Types, DOE Codes, Department, and mapping definitions.
-
-### Post-migration checks
-
-1. Review the migration log for naming conflicts and conversion errors.
-2. Confirm the generated AURA model name did not collide with an existing model in Unified.
-3. Validate templates, attributes, and imported cases, then use bulk edit / Excel-based cleanup where the automatic conversion is not sufficient.
 

@@ -341,6 +341,42 @@ Key configuration areas (examples):
 - `DataBaseCleanupSettings | SchedulingServices | PurgeForDeletedModels` — control whether AUS published DB data is deleted when a model is deleted (V15.0.4+)
 - `globalSettingsEditor` supports JSON editing with full schema awareness
 
+### Edit Settings Dialog
+
+Access: Settings page → **Edit**
+
+The **Edit Settings** dialog edits global settings as JSON keyword/value pairs. Keywords that are not listed use their default values. The editor provides keyword suggestions, sample values, validation, and hover descriptions, but users are expected to understand basic JSON syntax.
+
+Editing workflow:
+
+1. Type a product keyword, such as `s` for Scheduling, or press Space to list available keywords.
+2. Select a keyword; the editor inserts the matching JSON structure.
+3. Place the cursor inside `{ }` and press Space again to see available options.
+4. Select options and enter values until the desired setting is defined.
+5. Right-click and choose **Format Document** to apply JSON indentation.
+6. Resolve validation issues until **Submit** becomes active.
+7. Click **Submit** to write the visible JSON changes back to the Settings page; edited keywords apply immediately.
+
+Editing notes:
+
+| Hint | Detail |
+|---|---|
+| Restore a default | Enter a blank value for a keyword, for example `"ReportsFolder": " "`. |
+| Format Document | Applies JSON indentation only; it does not fix syntax errors. |
+| Error indicators | The editor marks possible problems on the right side in red. |
+| `Alt+F8` | Opens errors and possible fixes; use arrows to move through errors, then rerun after correction. |
+| Hover help | Shows keyword descriptions and acceptable value hints. |
+| Submit | Disabled while JSON syntax errors remain. |
+
+JSON basics used by the editor:
+
+- Settings are key/value pairs separated by `:`.
+- Keys are strings enclosed in double quotes.
+- Values can be strings, numbers, booleans, arrays, objects, or `null`; string values require double quotes.
+- Commas separate pairs or array items, except after the final item.
+- Objects use `{ }`; arrays use `[ ]`.
+- JSON comments are not supported.
+
 ---
 
 ## Folders
